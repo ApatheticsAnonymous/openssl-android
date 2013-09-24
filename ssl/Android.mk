@@ -49,6 +49,7 @@ include $(LOCAL_PATH)/../android-config.mk
 LOCAL_SRC_FILES += $(local_src_files)
 LOCAL_C_INCLUDES += $(local_c_includes)
 LOCAL_STATIC_LIBRARIES += libcrypto
+LOCAL_ARM_MODE := $(APP_ARM_MODE)
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE:= libssl
 include $(BUILD_SHARED_LIBRARY)
@@ -59,6 +60,7 @@ include $(LOCAL_PATH)/../android-config.mk
 LOCAL_SRC_FILES += $(local_src_files)
 LOCAL_C_INCLUDES += $(local_c_includes)
 LOCAL_STATIC_LIBRARIES += libcrypto
+LOCAL_ARM_MODE := $(APP_ARM_MODE)
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE:= libssl_static
 include $(BUILD_STATIC_LIBRARY)
@@ -80,6 +82,7 @@ include $(LOCAL_PATH)/../android-config.mk
 LOCAL_SRC_FILES:= ssltest.c
 LOCAL_C_INCLUDES += $(local_c_includes)
 LOCAL_SHARED_LIBRARIES := libssl libcrypto
+LOCAL_ARM_MODE := $(APP_ARM_MODE)
 LOCAL_MODULE:= ssltest
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_EXECUTABLE)
